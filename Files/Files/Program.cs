@@ -28,6 +28,10 @@ namespace Files
             // copy file path 
             Console.WriteLine("***** Copy Path *****");
             operation.CopyFilePath(filePath);
+
+            // delete file
+            Console.WriteLine("***** Delete Path ***** ");
+            operation.DeleteFile();
         }
     }
 }

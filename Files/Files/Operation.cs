@@ -62,5 +62,21 @@ namespace Files
             string copypath = @"E:\Visual Studio\.Net\FilesIO\Files\Files\TextFile2.txt";
             File.Copy(filePath, copypath, true);
         }
+
+        // Delete file 
+        public void DeleteFile()
+        {
+            Console.WriteLine("Welocme to Delte file");
+            string path = @"E:\Visual Studio\.Net\FilesIO\Files\Files\TextFile2.txt";
+            if (File.Exists(path))
+            {
+                 File.Delete(path);
+                 Console.WriteLine("File Deleted");
+            }
+            else
+            {
+                Console.WriteLine("File not deleted");
+            }
+        }
     }
 }
