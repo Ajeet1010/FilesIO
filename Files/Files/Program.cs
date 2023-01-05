@@ -10,12 +10,24 @@ namespace Files
     {
         static void Main(string[] args)
         {
-            string path = @"E:\Visual Studio\.Net\FilesIO\Files\Files\TextFile1.txt";
-            
-            // Read All Text
-            string lines;
-            lines = File.ReadAllText(path);
-            Console.WriteLine(lines);
+            string filePath = @"E:\Visual Studio\.Net\FilesIO\Files\Files\TextFile1.txt";
+            Operation operation = new Operation();
+
+            // for file exists
+            Console.WriteLine("***** File exists *****");
+            operation.FileExist(filePath);
+
+            // reading all lines
+            Console.WriteLine("***** Read Lines *****");
+            operation.ReadAllLines(filePath);
+
+            // for reading all text
+            Console.WriteLine("***** Text Read *****");
+            operation.ReadAllText(filePath);
+
+            // copy file path 
+            Console.WriteLine("***** Copy Path *****");
+            operation.CopyFilePath(filePath);
         }
     }
 }
