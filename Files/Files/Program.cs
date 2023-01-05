@@ -32,6 +32,10 @@ namespace Files
             // delete file
             Console.WriteLine("***** Delete Path ***** ");
             operation.DeleteFile();
+
+            // using stream reader
+            Console.WriteLine("***** Stream reader ***** ");
+            operation.Read_StreamReader(filePath);
         }
     }
 }

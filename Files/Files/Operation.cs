@@ -59,6 +59,7 @@ namespace Files
         public void CopyFilePath(string filePath)
         {
             Console.WriteLine("Welcome to copy file path");
+            // path of file where u want to copy the data of another file
             string copypath = @"E:\Visual Studio\.Net\FilesIO\Files\Files\TextFile2.txt";
             File.Copy(filePath, copypath, true);
         }
@@ -67,6 +68,7 @@ namespace Files
         public void DeleteFile()
         {
             Console.WriteLine("Welocme to Delte file");
+            // path of the file u want to delete
             string path = @"E:\Visual Studio\.Net\FilesIO\Files\Files\TextFile2.txt";
             if (File.Exists(path))
             {
@@ -76,6 +78,19 @@ namespace Files
             else
             {
                 Console.WriteLine("File not deleted");
+            }
+        }
+
+        // Reading data using Stream Reader
+        public void Read_StreamReader(string filePath)
+        {
+            using (StreamReader sr = File.OpenText(filePath))
+            {
+                string s = "";
+                while ((s = sr.ReadLine()) != null)
+                {
+                    Console.WriteLine(s);
+                }
             }
         }
     }
