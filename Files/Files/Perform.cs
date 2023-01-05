@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace Files
 {
-    public class Program
+    public class Perform
     {
-        static void Main(string[] args)
+        // Read All Lines
+        public static void ReadAllLines()
         {
             string path = @"E:\Visual Studio\.Net\FilesIO\Files\Files\TextFile1.txt";
-            
-            // Read All Lines
-            string lines;
-            lines = File.ReadAllText(path);
-            Console.WriteLine(lines);
+            string[] lines;
+            lines = File.ReadAllLines(path);
+            Console.WriteLine(lines[0]);
         }
     }
 }
